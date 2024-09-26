@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "newsifre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">@ViewBag.hatasifre</h4>
+        <form method="post">
+            <center>
+                <h4  class="login-text">yeni şifre</h4>
+                <input type="password" name="KullaniciSifre" placeholder="Şifre" required>
+                <h4 class="login-text">şifreyi tekrar giriniz</h4>
+                <input type="password" name="KullaniciSifre" placeholder="Şifre tekrar" required>
+                <button id="btn-login">şifre değiştir</button>
+                <p>
+
+                </p>
+            </center>
+        </form>
+    </div>
+</div>

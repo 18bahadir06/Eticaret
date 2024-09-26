@@ -1,0 +1,54 @@
+﻿@using Eticaret.Models;
+@using Eticaret.Controllers;
+@using System.Web.UI.WebControls;
+@model List<Eticaret.Models.Urun>
+
+
+@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="container">
+    <div class="jumbotron">
+        @ViewBag.hata
+        @if (Session["KullaniciAd"] != null)
+        {
+            <h1>@Session["KullaniciAd"] @Session["KullaniciSoyad"] hoş geldiniz.</h1>
+        }
+
+    </div>
+</div>
+
+
+@Styles.Render("~/urunler.css")
+
+
+<div class="icerik">
+    @foreach (var ktg in Model)
+    {
+
+        <form method="post">
+            <div class="card">
+                <h1>@ktg.Urunİnfo</h1>
+
+                <img src="@ktg.UrunLogo" />
+                <h4>Ürün özellikler</h4>
+                <p>
+                    Ram bellek  :@ktg.UrunRam gb
+                </p>
+                <p>
+                    Disk        :@ktg.UrunDisk gb
+                </p>
+                <p>
+                    İşlemci     :@ktg.Urunİslemci
+                </p>
+                <p>
+                    ekran kartı :@ktg.UrunGpu
+                </p>
+                <a href="~/FirmaUrun/UrunGetir/@ktg.UrunId" name="UrunId" class="btn btn-danger">incele</a>
+            </div>
+        </form>
+    }
+</div>
+
+

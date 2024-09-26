@@ -1,0 +1,140 @@
+﻿body {
+}
+
+.navbar {
+    background-color: #fff;
+    padding: 90px;
+    font-size: 50px;
+}
+p1{
+    font-family: SFProDisplay !important;
+}
+
+
+ul {
+    background-color: #4fb99f;
+    padding:4%;
+}
+
+li {
+    display: inline-block;
+    float: left;
+    padding: 10px;
+    font-family: SFProDisplay !important;
+}
+
+li.active {
+    background-color: #068587;
+    border-bottom: 3px solid #f2b134;
+}
+
+li >a{
+    display: inline-block;
+    color: #fff;
+    padding: 12px 42px;
+    text-decoration: none;
+    font-size: 30px;
+}
+
+    li:hover {
+        background-color: #068587;
+        border-bottom: 3px solid #f2b134;
+    }
+
+.dropdown-content a {
+    display: inline-block;
+    color: #fff;
+    padding: 12px 44px;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #068587;
+    position:relative;
+    left:-10px;
+
+}
+    .dropdown-content a:hover {
+
+        display:block;
+        background-color: #068587;
+        border-bottom: 3px solid #f2b134;
+    }
+
+.dropdown-content {
+    position:absolute;
+    z-index:1;
+    display:none;
+}
+.dropdown:hover .dropdown-content {
+    display:block;
+}
+
+.dropdown:hover .dropdown-a {
+    display: block;
+}
+
+
+
+
+.text {
+    position: relative;
+    left: 46em;
+    top: 20px;
+    display: block;
+    width: 100%;
+    padding-right: 200px;
+    font-size: 23px;
+    color: #212529;
+    background-color: #fff;
+    background-clip: padding-box;
+    border: 1px solid #ced4da;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    border-radius: 0.375rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+#arama {
+    background-color: white;
+    font-size: 43px;
+    position: relative;
+    right: -928px;
+    top: -24px;
+    border-radius: 15px;
+}
+
+.dropdown-user{
+
+}
+
+#girisayar {
+    display: inline-block;
+    color: #fff;
+    padding: 12px 29px;
+    text-decoration: none;
+    font-size: 25px;
+    background-color: #068587;
+    position: relative;
+    left: -10px;
+}
+
+#hesapayar {
+    display: inline-block;
+    color: #fff;
+    padding: 12px 38px;
+    text-decoration: none;
+    font-size: 24px;
+    background-color: #068587;
+    position: relative;
+    left: -10px;
+}
+#login {
+    display: inline-block;
+    color: #fff;
+    padding: 12px 42px;
+    text-decoration: none;
+    font-size: 30px;
+    position:relative;
+}
+
+
+

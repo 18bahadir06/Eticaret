@@ -1,0 +1,36 @@
+﻿
+@{
+    ViewBag.Title = "Urunler";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/urunler.css")
+
+<a class="btn btn-info" href="~/FirmaUrun/KatagoriSec">Yeni ürün ekle</a>
+    <div class="icerik">
+        @foreach (var ktg in Model)
+        {
+
+            <form method="post">
+                <div class="card">
+                    <h1>@ktg.Urunİnfo</h1>
+
+                    <img src="@ktg.UrunLogo" />
+                    <h4>Ürün özellikler</h4>
+                    <p>
+                        Ram bellek  :@ktg.UrunRam gb
+                    </p>
+                    <p>
+                        Disk        :@ktg.UrunDisk gb
+                    </p>
+                    <p>
+                        İşlemci     :@ktg.Urunİslemci
+                    </p>
+                    <p>
+                        ekran kartı :@ktg.UrunGpu
+                    </p>
+                    <a href="~/FirmaUrun/UrunGetir/@ktg.UrunId" name="UrunId"  class="btn btn-danger">düzenle</a>
+                </div>
+            </form>
+        }
+    </div>

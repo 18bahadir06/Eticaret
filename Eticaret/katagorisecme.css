@@ -1,0 +1,36 @@
+﻿body {
+}
+#AltKatagoriId {
+    background-color: lightpink;
+    font-size: 2rem;
+    position: relative;
+    left: 39em;
+    color:white;
+    text-align:center;
+}
+
+#altkatagorisec {
+    color: white;
+}
+#altkatagorisec:hover {
+    color: black;
+    text-decoration: overline;
+}
+#btn-kayit {
+    text-align:center;
+    height:2em;
+    background-color: blue;
+    font-size: 2rem;
+    position: relative;
+    left: 39em;
+    width: 279px;
+}
+#btn-gecis {
+    text-align:center;
+    height:2em;
+    font-size: 2rem;
+    position: relative;
+    left: 39em;
+    width: 279px;
+}
+

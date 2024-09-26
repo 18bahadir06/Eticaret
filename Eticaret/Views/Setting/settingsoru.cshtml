@@ -1,0 +1,37 @@
+﻿
+@{
+    ViewBag.Title = "settingsoru";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Kullanıcı Ad ve Soyadı Ayarları</h4>
+        <p></p>
+        <h5>Güvenlik sorusu  : @Session["gsouru"] </h5>
+        <h5>Güvenlik cevabı  : @Session["gsorusu"] </h5>
+        <form method="post">
+            <center>
+                <select name="gsorusuid" ng-model="veri" class="form-control ng-pristine ng-pristine valid">
+                    @{
+                        int i = 1;
+                        foreach (var ktg in Model)
+                        {
+                            <option name="" value="@i">@ktg.gsouru</option>
+                            i++;
+                        }
+                    }
+
+                </select>
+                <input name="gcevap" placeholder="Cevap" required>
+                <button href"#" id="btn-login">Değiştir</button>
+
+                <a href="/Home/setting" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
+

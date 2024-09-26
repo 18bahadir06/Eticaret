@@ -1,0 +1,32 @@
+﻿body {
+}
+#form {
+    display: block;
+    margin: auto;
+    background: darkslategrey;
+    border-radius: 5px;
+    width: 50%;
+}
+label{
+    color:aliceblue;
+    font-size:x-large;
+}
+#vehicle {
+    transform: scale(2.5);
+}
+#btn-kayit {
+    color: rgb(226, 19, 70);
+    outline: 0;
+    border: 2px solid currentcolor;
+    transition: 0.3s ease all;
+    background-color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 12px 125px;
+    display: inline-block;
+}
+    #btn-kayit:hover {
+        color: #fff;
+        border-color: transparent;
+        background-color: rgb(226, 19, 70);
+    }

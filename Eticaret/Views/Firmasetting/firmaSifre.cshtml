@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "firmaSifre";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/tasarimgiris.css")
+
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Şifre değişikliği</h4>
+        <form class="login-form" method="post">
+            <center runat="server">
+
+                <h5 class="login-text">Eski şifrenizi giriniz</h5>
+
+
+                <input type="text" name="firmasifre" placeholder="Eski şifre">
+                <p></p>
+                <button id="btn-login">şifre değiştir</button>
+                <p></p>
+
+                
+            </center>
+        </form>
+        <h4 class="login-text">@ViewBag.Hata</h4>
+
+    </div>
+</div>
+
+

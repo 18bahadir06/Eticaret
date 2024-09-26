@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "kategoriekle";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/Kategoriekle.css")
+<form class="alert" id="form" method="post">
+
+    <div class="a">
+        <label>Kategori ismi</label>
+        <input name="AltKatagoriAd" type="text" class="form-control" />
+
+    </div>
+    <br />
+    <input type="checkbox" id="vehicle" name="vehicle1" value="Ram">a
+    <label for="vehicle1">Ram</label><br><br />
+
+    <input type="checkbox" id="vehicle" name="vehicle2" value="Disk">a
+    <label for="vehicle2">Disk</label><br><br />
+
+    <input type="checkbox" id="vehicle" name="vehicle3" value="Islemci">a
+    <label for="vehicle3">İşlemci</label><br><br />
+
+    <input type="checkbox" id="vehicle" name="vehicle3" value="Gpu">a
+    <label for="vehicle4">GPU</label><br><br />
+
+
+
+    <button id="btn-kayit">Yükle</button>
+
+</form>

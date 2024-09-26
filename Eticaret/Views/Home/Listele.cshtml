@@ -1,0 +1,16 @@
+﻿@using Eticaret.Models;
+@using Eticaret.Controllers;
+@using System.Web.UI.WebControls;
+@model List<Eticaret.Models.AltKatgori>
+@{
+    ViewBag.Title = "Listele";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listele</h2>
+@{
+    foreach (var ktg in Model)
+    {
+    <h2>@ktg.AltKatagoriAd</h2> 
+    }
+}

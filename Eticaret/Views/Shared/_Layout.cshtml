@@ -1,0 +1,121 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>technolog</title>
+    @Styles.Render("~/tasarim.css")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/brands.min.css" rel="stylesheet" />
+
+</head>
+
+
+<body>
+    <link rel="Stylesheet" type="text/css" href="~/tasarim.css">
+    
+
+
+    <ul>
+
+        @{
+            if (Session["firmaId"] != null)
+            {
+                <li>
+                    <a href="~/Home/Index">Anasayfa</a>
+                </li>
+                <li style="display: block" class="dropdown">
+                    <a href="/FirmaUrun/Urunler" class="dropbtn"> Ürünler  </a>
+                </li>
+                <li>
+                    <a href="~/Home/Siparis">Siparişler</a>
+                </li>
+
+            }
+            else
+            {
+                <li>
+                    <a href="~/Home/Index">Anasayfa</a>
+                </li>
+                <li style="display: block" class="dropdown">
+                    <a href="" class="dropbtn"> Kategoriler  </a>
+                    <div class="dropdown-content">
+                        <a style="display: block;" href="~/Home/Listele"><i class="fa-solid fa-laptop"></i> Dizüstü</a>
+                        <a style="display: block;" href="~/Home/Listelemasaustu"><i class="fa-solid fa-computer"></i> Masaüstü</a>
+                        <a style="display: block;" href="~/Home/Listeledonanım"><i class="fa-solid fa-fan"></i> Donanım</a>
+                    </div>
+                </li>
+                <li>
+                    <a href="~/Home/Siparis">Siparişler</a>
+                </li>
+            }
+        }
+        <input class="text" type="text" name="arama"
+               placeholder="arama" data-module-id="0">
+
+
+        <a href="#"><i id="arama" class="fas fa-search"></i></a>
+        <a href="#" id="sepet"></a>
+
+
+
+        @{
+            if (@Session["KullaniciAd"] == null && Session["firmaId"] == null)
+            {
+                <li style="display:block" class="dropdown">
+                    <a id="login" style="display:block" href="#"><i class="fa-regular fa-user"></i> Giriş</a>
+                    <div class="dropdown-content">
+                        <a id="girisayar" href="~/Home/Giris"><i class="fa-regular fa-user"></i> Giriş Yap</a>
+                        <a id="girisayar" style="display:block;" href="~/Home/Kayit"><i class="fa-regular fa-user"></i> Kayıt Ol</a>
+                        <a id="girisayar" style="display:block;" href="~/Home/firmakayit"><i class="fa-regular fa-user"></i> Firma Kayıt</a>
+
+                    </div>
+                </li>
+            }
+            else if (Session["firmaId"] != null)           //firma
+            {
+                <li style="display:block" class="dropdown">
+                    <a id="login" style="display:block" href="#"><i class="fa-regular fa-user"></i>@Session["firmaAd"]</a>
+                    <div class="dropdown-content">
+                        <a id="girisayar" href=""><i class="fa-regular fa-user"></i> Ürünler</a>
+                        <a id="girisayar" style="display:block;" href=""><i class="fa-regular fa-user"></i> Siparişler</a>
+                        <a id="girisayar" style="display:block;" href=""><i class="fa-regular fa-user"></i> Kargo</a>
+                        <a id="hesapayar" style="display:block;" href="~/Home/firmasetting"><i class="fa-sharp fa-solid fa-gear"></i> Ayarlar</a>
+                    </div>
+                </li>
+            }
+            else if (Session["KullaniciAd"] != null)
+            {
+                <li style="display:block" class="dropdown">
+                    <a id="login" style="display:block" href="#"><i class="fa-regular fa-user"></i> @Session["KullaniciAd"]</a>
+                    <div class="dropdown-content">
+                        <a id="hesapayar" style="display:block;" href="~/Home/Sepet"><i class="fa-solid fa-cart-shopping"></i> Sepet</a>
+                        <a id="hesapayar" style="display:block;" href="~/Home/Siparis"><i class="fa-regular fa-folder"></i> Siparişler</a>
+                        <a id="hesapayar" style="display:block;" href="~/Home/setting"><i class="fa-sharp fa-solid fa-gear"></i> Ayarlar</a>
+                    </div>
+                </li>
+            }
+
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+    </ul>
+
+    @RenderBody()
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

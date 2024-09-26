@@ -1,0 +1,21 @@
+﻿
+@{
+    ViewBag.Title = "hesapdelete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <form method="post">
+            <center>
+                <h4 class="login-text">Sayın @Session["KullaniciAd"] hesabınızı silmek istediğinize eminmisiniz?</h4>
+                <button id="btn-login">Hesabımı sil</button>
+                <p></p>
+                <a href="~/Home/setting" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
+

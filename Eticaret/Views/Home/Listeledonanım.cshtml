@@ -1,0 +1,13 @@
+﻿
+@{
+    ViewBag.Title = "Listeledonanım";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Listeledonanım</h2>
+            
+                @foreach (var ktg in Model)
+                {
+               <a id="altkatagori" style="display: block;" href="#">@ktg.AltKatagoriAd</a> 
+                }
+            

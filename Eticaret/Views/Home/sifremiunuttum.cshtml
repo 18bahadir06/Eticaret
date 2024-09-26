@@ -1,0 +1,43 @@
+﻿@{
+    ViewBag.Title = "sifremiunuttum";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">@ViewBag.hatasifre</h4>
+        <h4 class="login-text">şifre yenileme</h4>
+        <form method="post">
+            <center>
+
+                <input name="KullaniciAd" placeholder="Ad"required>
+                <input name="KullaniciSoyad" placeholder="Soyad"required>
+                <input name="KullaniciMail" placeholder="Mail adresi"required>
+
+                <h5>guvenlik sorusunu cevaplayınız</h5>
+
+                <select name="gsorusuid" ng-model="veri" class="form-control ng-pristine ng-pristine valid">
+                    @{
+                        int i = 1;
+                        foreach (var ktg in Model)
+                        {
+                            <option name="" value="@i">@ktg.gsouru</option>
+                            i++;
+                        }
+                    }
+
+                </select>
+                <input name="gcevap" placeholder="Cevap">
+                <button id="btn-login">şifre değiştir</button>
+                <a href="~/Home/Kayit" id="btn-kayit">kayıt ol</a>
+                <p>
+
+                </p>
+                <a href="/Home/Giris" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
+

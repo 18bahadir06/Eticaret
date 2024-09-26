@@ -1,0 +1,32 @@
+﻿
+@{
+    ViewBag.Title = "KatagoriSec";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+@Styles.Render("~/katagorisecme.css")
+
+<form method="post">
+    <select class="form-control" name="AltKatagoriId" id="AltKatagoriId" ng-model="veri">
+        @{
+            int e = 0;
+            foreach (var a in Model)
+            {
+                e++;
+                <option id="altkatagorisec" name="AltKatagoriId" value="@a.AltKatagoriId">@a.AltKatagoriAd</option>
+            }
+        }
+    </select>
+    <br/>
+
+    <a href="~/FirmaUrun/kategoriekle" class="btn btn-danger" id="btn-gecis">yeni katagori ekle</a>
+
+    @for (int i = 0; i < 10; i++)
+    {
+        <br />
+    }
+
+    <button id="btn-kayit">devam et</button>
+</form>
+

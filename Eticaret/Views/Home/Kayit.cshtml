@@ -1,0 +1,41 @@
+﻿
+@{
+    ViewBag.Title = "Kayit";
+}
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Kayıt</h4>
+        <form method="post">
+            <center>
+                <input name="KullaniciAd" placeholder="Ad" required>
+                <input name="KullaniciSoyad" placeholder="Soyad" required>
+                <input name="KullaniciMail" placeholder="Mail adresi" required>
+                <input name="kullaniciSifre" placeholder="Şifre" type="password" required>
+                <input name="kullaniciSifretekrar" placeholder="ŞifrE Tekrar" type="password" required><p></p>
+                <h4>Güvenlik sorusu</h4>
+
+                <select name="gsorusuid" ng-model="veri" class="form-control ng-pristine ng-pristine valid">
+                    @{
+                        int i = 1;
+                        foreach (var ktg in Model)
+                        {
+                            <option name="" value="@i">@ktg.gsouru</option>
+                            i++;
+                        }
+                    }
+
+                </select>
+                <input name="gcevap" placeholder="Cevap" required>
+
+                <button href="#" id="btn-login">Kayıt ol</button>
+                <p>
+
+                </p>
+                <a href="/Home/Index" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,20 @@
+﻿
+@{
+    ViewBag.Title = "UrunGetir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@{
+foreach (var a in Model)
+            {
+                <h1>@a.UrunAd</h1>
+                <img src="@a.UrunLogo"/>
+                <p>@a.Urunİnfo</p>
+                <p>ram bellek     : @a.UrunRam gb</p>
+                <p>bellek(hafıza) : @a.UrunDisk gb</p>
+                <p>işlemci        : @a.Urunİslemci </p>
+                <p>işlemci        : @a.Urunİslemci </p>
+            }
+}
+<h2></h2>
+

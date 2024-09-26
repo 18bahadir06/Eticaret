@@ -1,0 +1,46 @@
+﻿
+@{
+    ViewBag.Title = "sifredegistir";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimgiris.css")
+
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Şifre değişikliği</h4>
+        <form class="login-form" method="post">
+            <center runat="server">
+
+                        <h5 class="login-text">Eski şifrenizi giriniz</h5>
+
+
+                <input type="text" name="KullaniciSifre" placeholder="Eski şifre">
+                <p></p>
+                <h5 class="login-text">Guvenlik sorusunu seçiniz ve cevaplayınız</h5>
+                <select name="gsorusuid" ng-model="veri" class="form-control ng-pristine ng-pristine valid">
+                    @{
+                        int i = 1;
+                        foreach (var ktg in Model)
+                        {
+                            <option name="" value="@i">@ktg.gsouru</option>
+                            i++;
+                        }
+                    }
+                </select>
+
+                <input name="gcevap" placeholder="Cevap">
+
+                <button id="btn-login">şifre değiştir</button>
+<p></p>
+
+                <h1>@ViewBag.hatasifre</h1>
+
+            </center>
+        </form>
+        <h4 class="login-text">@ViewBag.hata</h4>
+
+    </div>
+</div>
+

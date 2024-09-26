@@ -1,0 +1,22 @@
+﻿
+@{
+    ViewBag.Title = "firmaInfo";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">firma bilgisi güncelle</h4>
+        <p></p>
+        <form method="post">
+            <center>
+                <input name="FirmaInfo" placeholder="@Session["FirmaInfo"]" required>
+
+                <button href"#" id="btn-login">Değiştir</button>
+                <a href="~/Home/firmasetting" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
+

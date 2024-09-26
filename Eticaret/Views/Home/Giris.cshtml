@@ -1,0 +1,31 @@
+﻿
+@{
+    ViewBag.Title = "Giris";
+
+}
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Giriş</h4>
+        <form method="post">
+            <center>
+                <input name="KullaniciMail" placeholder="Mail adresi" required>
+                <input name="kullaniciSifre" placeholder="Şifre" type="password" required>
+
+                <button href="" id="btn-login">Giriş yap</button>
+                <p>
+
+                </p>
+                <a href="/Home/Index" class="btn btn-danger">Geri dön</a>
+                <p></p>
+                <a href="~/Home/sifremiunuttum">Şifremi unuttum</a>
+
+                <h5>@ViewBag.hata </h5>
+            </center>
+        </form>
+    </div>
+</div>
+
+
+

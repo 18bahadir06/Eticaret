@@ -1,0 +1,34 @@
+﻿@model Eticaret.Models.Firma
+@{
+    ViewBag.Title = "firmakayit";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Kayıt</h4>
+        <form method="post" runat ="server">
+            <center>
+                <input name="FirmaAd" placeholder="Firma Adı" required>
+                <input name="firmaMail" placeholder="E posta" required>
+                <input name="FirmaInfo" placeholder="Firma bilgisi " required>
+                <input name="FirmaAdres" placeholder="Firma adres" required>
+                <input name="firmaSifre" placeholder="Şifre" type="password" required>
+                <input name="firmaSifre" placeholder="Şifre Tekrar" type="password" required><p></p>
+
+                <td></td>
+
+                <h4>Firmanın logosunu eleyiniz</h4>
+                <input type="file" class="default" value="firmalogo" name="firmalogo" id="firmalogo">
+<br/>
+                <button href="#" id="btn-login">Kayıt ol</button>
+                <br/>
+
+
+                <a href="/Home/Index" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>

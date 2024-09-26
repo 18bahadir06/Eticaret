@@ -1,0 +1,24 @@
+﻿
+@{
+    ViewBag.Title = "settingmail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Mail ayarları</h4>
+        <p></p>
+        <h5>Mail    : @Session["KullaniciMail"] </h5>
+        <form method="post">
+            <center>
+                <input name="KullaniciMail" placeholder="Mail" required>
+                
+                <button href"#" id="btn-login">Değiştir</button>
+                <a href="/Home/setting" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
+

@@ -1,0 +1,22 @@
+﻿body {
+    box-sizing: border-box;
+    font-family: Lato, Arial;
+    background-color: lightcyan;
+
+}
+.card {
+    width: 298px;
+    float: left;
+    margin-right: 30px;
+}
+.btn-info{
+    width:250px;
+    float:right;
+    height:65px;
+    background-color:blue;
+    color:white;
+    font-size:30px;
+}
+.btn-info:hover {
+    background-color: green;
+}

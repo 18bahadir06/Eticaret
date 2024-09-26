@@ -1,0 +1,25 @@
+﻿
+@{
+    ViewBag.Title = "settingad";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@Styles.Render("~/tasarimkayit.css")
+
+<div class="outer-box">
+    <div class="login-box">
+        <h4 class="login-text">Kullanıcı Ad ve Soyadı Ayarları</h4>
+        <p></p>
+        <h5>Ad    : @Session["KullaniciAd"] </h5>
+        <h5>Soyad : @Session["KullaniciSoyad"] </h5>
+        <form method="post">
+            <center>
+                <input name="KullaniciAd" placeholder="Ad" required>
+                <input name="KullaniciSoyad" placeholder="Soyad" required>
+
+                <button href"#" id="btn-login">Değiştir</button>
+                <a href="/Home/setting" class="btn btn-danger">Geri dön</a>
+            </center>
+        </form>
+    </div>
+</div>
